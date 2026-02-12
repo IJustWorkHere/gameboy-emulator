@@ -15,7 +15,9 @@ Currently implemented:
 - ✅ 16-bit register pairs (AF, BC, DE, HL)
 - ✅ Stack Pointer (SP) and Program Counter (PC)
 - ✅ CPU flags (Zero, Subtract, Half-carry, Carry)
-- ✅ Comprehensive test suite for register operations
+- ✅ Memory Management Unit (MMU) with 64KB flat memory
+- ✅ ROM loading (up to 32KB)
+- ✅ Comprehensive test suites for registers and MMU
 
 ## Features
 
@@ -58,20 +60,21 @@ cargo test
 ```
 src/
 ├── main.rs      # Entry point
-└── cpu.rs       # CPU implementation (registers, flags)
+├── cpu.rs       # CPU implementation (registers, flags)
+└── mmu.rs       # Memory management unit
 ```
 
 ## Roadmap
 
 - [x] CPU register implementation
-- [ ] Memory management unit (MMU)
+- [x] Memory management unit (MMU)
 - [ ] CPU instruction set implementation
 - [ ] Interrupt handling
 - [ ] Timer implementation
 - [ ] Graphics (PPU - Pixel Processing Unit)
 - [ ] Sound (APU - Audio Processing Unit)
 - [ ] Input handling (joypad)
-- [ ] ROM loading
+- [x] ROM loading
 - [ ] Save state support
 - [ ] Debugger
 
